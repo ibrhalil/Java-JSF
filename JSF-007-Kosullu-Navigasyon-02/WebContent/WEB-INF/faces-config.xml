@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_3.xsd"
+    version="2.3">
+
+	<navigation-rule>
+		<from-view-id>/sayfa1.jsp</from-view-id><!-- sayfa1.jsp için uygulanan bir kural oldugunu belirtildi -->
+		
+		<navigation-case>
+			<from-action>#{beanYonlendir.metot1}</from-action> 	<!-- metot ve gelen degerin kontrolunu yapan kısım -->
+			<from-outcome>yonlendirme1</from-outcome>	<!-- action kısmına yazdığımız kısım -->
+			<to-view-id>sayfa2.jsp</to-view-id>		<!-- yönlenilen sayfa  -->
+		</navigation-case>
+		
+		<navigation-case>
+			<from-action>#{beanYonlendir.metot2}</from-action> 
+			<from-outcome>yonlendirme2</from-outcome>	
+			<to-view-id>sayfa3.jsp</to-view-id>		
+		</navigation-case>
+		
+		<navigation-case>
+			<from-action>#{beanYonlendir.metot3}</from-action> 
+			<from-outcome>yonlendirme2</from-outcome>	
+			<to-view-id>sayfa4.jsp</to-view-id>		
+		</navigation-case>
+		
+		
+		<navigation-case>
+			<from-outcome>redirectKullanim</from-outcome>	
+			<to-view-id>sayfa2.jsp</to-view-id>		
+			<redirect/>				<!-- sayfa URL si değişir -->
+		</navigation-case>
+		
+	</navigation-rule>
+
+</faces-config>

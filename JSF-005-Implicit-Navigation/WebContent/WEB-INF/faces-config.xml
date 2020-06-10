@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_3.xsd"
+    version="2.3">
+
+	<navigation-rule>
+		<description>Açıklama</description>			<!-- kural ile ilgili açıklama -->
+		<from-view-id>/sayfa1.jsp</from-view-id>	<!-- kuralın hangi sayfada geçerli olduğunu belirtiriz -->
+		
+		<navigation-case>
+			<from-outcome>Anasayfa</from-outcome>
+			<to-view-id>sayfa2.jsp</to-view-id>
+		</navigation-case>
+			
+		<navigation-case>
+			<from-outcome>Hakkında</from-outcome>
+			<to-view-id>sayfa3.jsp</to-view-id>
+		</navigation-case>
+		
+		<navigation-case>
+			<from-outcome>İletişim</from-outcome>
+			<to-view-id>sayfa4.jsp</to-view-id>
+		</navigation-case>
+		
+	</navigation-rule>
+
+</faces-config>
